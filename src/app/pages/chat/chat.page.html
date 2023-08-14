@@ -1,40 +1,66 @@
 <ion-header>
-  <ion-toolbar class="bg-gray-900 text-white">
+  <ion-toolbar class="bg-gray-800 text-gray-200 border border-white/20">
     <ion-buttons slot="start">
       <ion-menu-toggle>
         <ion-menu-button color="light"> </ion-menu-button>
       </ion-menu-toggle>
     </ion-buttons>
-    <ion-title>My chat title</ion-title>
+    <ion-title>JavaScript Overview</ion-title>
+    <ion-buttons slot="end">
+      <ion-icon name="add" size="large"></ion-icon>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
- 
-<ion-content>
-  <div
-    *ngFor="let msg of messages"
-    class="flex gap-4 p-6 border-b border-black/10 text-gray-800"
-    [ngClass]="{'bg-gray-50': msg.from === 1 }"
-  >
-    <img *ngIf="msg.from === 0" src="../../../assets/ram.png" class="w-8 h-8" />
-    <img *ngIf="msg.from === 1" src="../../../assets/bot.png" class="w-8 h-8" />
-    <p>{{ msg.text}}</p>
+
+<ion-content class="bg-gray-800" [fullscreen]="true">
+  <div class="flex m-2 py-3 gap-3 text-sm text-white ">
+    Default(GPT-3.5)
+    <ion-buttons class="share">
+      <ion-icon size="small" name="share-outline"></ion-icon>
+    </ion-buttons>
+  </div>
+  <div  class="text" *ngFor="let msg of messages" class="p-4 border-b border-black/10 text-gray-200"
+    [ngClass]="{'bg-gray-700': msg.from === 1 , 'flex': msg.from ===0}">
+    <div class="flex">
+      <img *ngIf="msg.from === 0" src="../../../assets/babu.png" class="w-8 h-8" />
+      <img *ngIf="msg.from === 1" src="../../../assets/chatgpt-logo-white-green-background-png.png" class="w-8 h-8" />
+      <p class="ion-padding-start">{{ msg.text}}</p>
+    </div>
+    <div *ngIf="msg.from === 0" class="ml-auto px-3 py-7" style="margin-bottom: -20px;">
+      <ion-icon size="small" name="create-outline"></ion-icon>
+    </div>
+    <div *ngIf="msg.from === 1" class="ion-text-end">
+      <ion-button fill="Clear" size="small">
+        <ion-icon size="small" color="light" name="clipboard-outline"></ion-icon>
+      </ion-button>
+      <ion-button class="ion-no-padding" fill="Clear" size="small">
+        <ion-icon size="small" color="light" name="thumbs-up-outline"></ion-icon>
+      </ion-button>
+      <ion-button fill="Clear" size="small">
+        <ion-icon size="small" color="light" name="thumbs-down-outline"></ion-icon>
+      </ion-button>
+    </div>
   </div>
 </ion-content>
- 
-<ion-footer class="ion-no-border">
+
+<ion-footer class=" border-t md:border-t-0 bg-gray-800 ">
   <ion-toolbar>
-    <div class="m-2 relative flex h-full justify-center">
-      <div
-        class="w-full md:w-3/5 py-2 md:px-4 relative border border-black/10 bg-white rounded-md shadow-[0_0_10px_rgba(0,0,0,0.10)]"
-      >
-        <ion-textarea autoGrow class="w-full pl-2 pr-7"></ion-textarea
-        ><button
-          (click)="submit()"
-          class="absolute p-1 rounded-md text-gray-500 bottom-1.5 right-1 md:bottom-2.5 md:right-2 hover:bg-gray-100"
-        >
-          <ion-icon name="send"></ion-icon>
-        </button>
+    <form class="  mx-2 flex flex-row gap-3">
+      <div class="mb-2 mt-2 relative flex flex-1 item-stretch md:flex-col">
+        <div class=" flex flex-col w-full bg-gray-700 rounded-md ">
+          <ion-textarea placeholder="  Send a message" class="text-white"></ion-textarea>
+          <button class="absolute p-1  text-gray-500 bottom-1.5 right-1 md:bottom-3">
+            <ion-icon name="send"></ion-icon>
+          </button>
+        </div>
       </div>
+      <div class="sync">
+        <ion-icon name="sync-outline" class="text-white h-5 w-5"></ion-icon>
+      </div>
+    </form>
+    <div class=" footer text-white">
+      Free Research Preview. ChatGPT may produce inaccurate information about people, places, or facts.
+      <u> ChatGPT August 3 Version </u>
     </div>
   </ion-toolbar>
 </ion-footer>

@@ -1,29 +1,89 @@
 <ion-split-pane when="sm" contentId="main">
   <ion-menu contentId="main">
     <ion-header>
-      <ion-toolbar class="bg-gray-900"></ion-toolbar>
     </ion-header>
     <ion-content class="bg-gray-900 flex h-full">
+      
       <a
-        class="flex m-2 py-3 px-3 items-center gap-3 rounded-md hover:bg-gray-500/10 duration-200 text-white cursor-pointer text-sm border border-white/20">
+        class="flex m-2 py-2.5 px-3 items-center gap-3 rounded-md text-white text-sm border border-white/40">
         <ion-icon name="add" class="add-icon"></ion-icon>
-        New chat</a>
+        New chat
+      </a>
 
-      <ion-list class="bg-gray-900 m-2 border-b border-white/20 min-h-[50%]">
-        <div button routerLink="/chat" class="hover:cursor-pointer text-white">
-          <div class="px-4 h-full rounded-md bg-gray-700 flex items-center">
+      <ion-list class="bg-gray-900 m-2 border-b border-white/20  text-sm">
+        <div class="text-white">
+          <div class="text-sm ion-padding-start py-2">Today</div>
+          <div class="px-4 h-full flex items-center">
             <ion-icon name="chatbox-outline"></ion-icon>
-            <span class="px-4 my-3">Chat 1</span>
+            <span class="px-4 my-3">JavaScript Overview</span>
+          </div>
+          <div class="px-4 h-full flex items-center">
+            <ion-icon name="chatbox-outline"></ion-icon>
+            <span class="px-4 my-3">Browser Sharing Alternative</span>
+          </div>
+          <div class="px-4 h-full flex items-center">
+            <ion-icon name="chatbox-outline"></ion-icon>
+            <span class="px-4 my-3">Share API Error Fix</span>
+          </div>
+          <div class="px-4 h-full flex items-center">
+            <ion-icon name="chatbox-outline"></ion-icon>
+            <span class="px-4 my-3">Deprecation of register</span>
+          </div>
+          <div class="px-4 h-full flex items-center">
+            <ion-icon name="chatbox-outline"></ion-icon>
+            <span class="px-4 my-3">Sharing plugin in Capacitor</span>
+          </div>
+          <div class="px-4 h-full flex items-center">
+            <ion-icon name="chatbox-outline"></ion-icon>
+            <span class="px-4 my-3">Conflict 'Share' Import</span>
+          </div>
+          <div class="px-4 h-full flex items-center">
+            <ion-icon name="chatbox-outline"></ion-icon>
+            <span class="px-4 my-3 py-1">Deprecation of Cpacitor</span>
+          </div>
+          <div class="text-sm ion-padding-start py-2">Yesterday</div>
+          <div class="px-4 h-full flex items-center">
+            <ion-icon name="chatbox-outline"></ion-icon>
+            <span class="px-4 my-3">Icon Inside Input</span>
+          </div>
+          <div class="px-4 h-full flex items-center">
+            <ion-icon name="chatbox-outline"></ion-icon>
+            <span class="px-4 my-3 py-1">Sort and Group Contacts</span>
+          </div>
+          <div class="text-sm ion-padding-start py-2">Previous 7 Days</div>
+          <div class="px-4 h-full flex items-center">
+            <ion-icon name="chatbox-outline"></ion-icon>
+            <span class="px-4 my-3">Fixing TypeScript</span>
+          </div>
+          <div class="px-4 h-full flex items-center">
+            <ion-icon name="chatbox-outline"></ion-icon>
+            <span class="px-4 my-3">Run PHP Files</span>
+          </div>
+          <div class="px-4 h-full flex items-center">
+            <ion-icon name="chatbox-outline"></ion-icon>
+            <span class="px-4 my-3">HTTP Request</span>
+          </div>
+          <div class="px-4 h-full flex items-center">
+            <ion-icon name="chatbox-outline"></ion-icon>
+            <span class="px-4 my-3">Merging PHP & HTML</span>
+          </div>
+          <div class="px-4 h-full flex items-center">
+            <ion-icon name="chatbox-outline"></ion-icon>
+            <span class="px-4 my-3">Loading Spinner</span>
           </div>
         </div>
       </ion-list>
-
-      <a
-        class="flex m-3 py-3 px-3 items-center gap-3 hover:bg-gray-500/10 duration-200 text-white cursor-pointer text-sm">
-        <ion-icon name="trash-outline"></ion-icon>
-        Clear conversations</a>
+        <a class="flex m-3 px-3 py-1 items-center gap-3 text-white text-sm">
+          <ion-icon name="person-outline"></ion-icon>
+          Upgrade to Plus<ion-badge color="warning" class="ml-auto rounded-md">New</ion-badge></a>
+      <div class="flex ion-padding-start mt-2 text-white text-sm">
+        <img src="../../../assets/babu.png" class="w-7 h-7" />
+        <div class="px-2">N.Thiruppathi Ram Babu(Thiru.)</div>
+        <ion-icon class="px-2" name="ellipsis-horizontal-outline"></ion-icon>
+      </div>
     </ion-content>
   </ion-menu>
 
   <ion-router-outlet id="main"></ion-router-outlet>
 </ion-split-pane>
+

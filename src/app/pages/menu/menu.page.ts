@@ -5,11 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './menu.page.html',
   styleUrls: ['./menu.page.scss'],
 })
-export class MenuPage implements OnInit {
+export class MenuPage {
 
-  constructor() { }
+  constructor() {
 
-  ngOnInit() {
-  }
+   }
+
+
+ 
 
 }
